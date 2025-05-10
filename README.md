@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Clean Architecture Next.js Project
+Project Structure
 
-## Getting Started
+src/
+├── app/ # Next.js App Router
+│ └── (routes)/ # App routes
+├── core/ # Enterprise Business Rules
+│ ├── domain/ # Domain models & interfaces
+│ └── usecases/ # Application business rules
+├── infrastructure/ # External interfaces & tools
+│ ├── api/ # API configurations
+│ ├── context/ # React Context providers
+│ ├── store/ # Zustand stores
+│ └── i18n/ # i18next configurations
+├── interface/ # Interface Adapters
+│ ├── controllers/ # UI Controllers
+│ ├── hooks/ # Custom React hooks
+│ ├── repositories/ # Data repositories
+│ └── services/ # External services
+└── presentation/ # UI Layer
+├── components/ # React components
+│ ├── ui/ # shadcn/ui components
+│ └── shared/ # Shared components
+├── layouts/ # Layout components
+└── styles/ # Global styles
 
-First, run the development server:
+Tech Stack
+Framework: Next.js 15
+Language: TypeScript
+Styling: Tailwind CSS
+UI Components: shadcn/ui + Radix UI
+State Management:
+Zustand (Global State)
+React Context (UI State)
+TanStack Query (Server State)
+Form Handling: react-hook-form + zod
+API Client: Axios
+Real-time: Socket.IO
+Internationalization: i18next
+Getting Started
+Prerequisites
+Node.js 18+
+Yarn
 
-```bash
-npm run dev
-# or
+Installation
+
+# Clone the repository
+
+git clone [repository-url]
+
+# Install dependencies
+
+yarn install
+
+# Set up environment variables
+
+cp .env.example .env.local
+
+# Start development server
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+yarn dev # Start development server
+yarn lint # Run ESLint
+yarn lint:fix # Fix ESLint errors
+yarn format # Format code with Prettier
 
-## Learn More
+# Production
 
-To learn more about Next.js, take a look at the following resources:
+yarn build # Build for production
+yarn start # Start production server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Architecture Overview
+Core Layer
+Contains business logic and domain models. Independent of external frameworks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Infrastructure Layer
+Handles external concerns like API calls, state management, and third-party integrations.
 
-## Deploy on Vercel
+Interface Layer
+Adapts data between core business logic and external interfaces.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Presentation Layer
+Contains all UI components and layouts.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Code Style
+ESLint for code linting
+Prettier for code formatting
+TypeScript for type safety
+Contributing
+Follow the existing code structure
+Use appropriate layer for new features
+Write clean, maintainable code
+Add proper TypeScript types
+Test your changes
+Environment Variables
