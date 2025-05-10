@@ -1,0 +1,9 @@
+{
+  "error.network": "Lỗi kết nối. Vui lòng kiểm tra đường truyền.",
+  "error.unauthorized": "Phiên đăng nhập hết hạn. Vui lòng đăng nhập lại.",
+  "error.forbidden": "Bạn không có quyền thực hiện hành động này",
+  "error.notFound": "Không tìm thấy tài nguyên",
+  "error.validation": "Lỗi xác thực dữ liệu",
+  "error.default": "Đã xảy ra lỗi",
+  "error.networkError": "Lỗi kết nối"
+}

@@ -1,7 +1,7 @@
 import { toast } from 'sonner';
-import { ApiError } from '../types/api-response';
+import { ApiError, CustomAxiosError } from '../types';
 
-export const handleApiError = (error: any): ApiError => {
+export const handleApiError = (error: CustomAxiosError): ApiError => {
   const defaultError: ApiError = {
     message: 'Something went wrong',
     code: 'UNKNOWN_ERROR',

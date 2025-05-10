@@ -1,3 +1,5 @@
+import { AxiosError } from 'axios';
+
 export interface ApiResponse<T> {
   data: T;
   message: string;
@@ -9,3 +11,5 @@ export interface ApiError {
   code: string;
   status: number;
 }
+
+export type CustomAxiosError = AxiosError<ApiError>;

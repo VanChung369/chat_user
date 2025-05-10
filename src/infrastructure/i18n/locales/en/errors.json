@@ -1,0 +1,9 @@
+{
+  "error.network": "Network error. Please check your connection.",
+  "error.unauthorized": "Unauthorized. Please login again.",
+  "error.forbidden": "You don't have permission to perform this action",
+  "error.notFound": "Resource not found",
+  "error.validation": "Validation error",
+  "error.default": "Something went wrong",
+  "error.networkError": "Network error"
+}
