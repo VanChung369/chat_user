@@ -4,5 +4,17 @@
   "singleQuote": true,
   "printWidth": 80,
   "tabWidth": 2,
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "importOrder": [
+    "^react$",
+    "^next(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/infrastructure/(.*)$",
+    "^@/interface/(.*)$",
+    "^@/presentation/(.*)$",
+    "^@/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
 }
