@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { queryKeys } from '../config';
+import { queryKeys } from '../config/query.config';
 
 export const useQueryUsers = () => {
   return useQuery({
